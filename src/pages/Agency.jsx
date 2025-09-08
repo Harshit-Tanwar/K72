@@ -2,8 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
-
-const Agence = () => {
+const Agency = () => {
   gsap.registerPlugin(ScrollTrigger);
   const imageDivRef = useRef(null);
   const imageRef = useRef(null);
@@ -120,4 +119,4 @@ const Agence = () => {
   );
 };
 
-export default Agence;
+export default Agency
