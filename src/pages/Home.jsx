@@ -1,4 +1,4 @@
-import React from "react";
+
 import Video from "../components/home/Video.jsx";
 import HomeHeroText from "../components/home/HomeHeroText.jsx";
 import HomeBottomText from "../components/home/HomeBottomText.jsx";
@@ -9,9 +9,9 @@ const Home = () => {
       <div className="h-screen w-screen fixed">
         <Video />
       </div>
-      <div className="relative h-screen w-screen flex flex-col justify-between m-0 p-0">
+      <div className="relative h-screen w-screen flex flex-col justify-between">
         <HomeHeroText />
-        <div className="absolute w-[19.5vw] right-[0.6vw] bottom-[17vh] text-white font-[font2] leading-[1.5vw] text-[14px]">
+        <div className="absolute lg:w-[19.5vw] w-[73vw] right-[0.6vw] lg:bottom-[17vh] bottom-[12vh] text-white font-[font2] lg:leading-[1.5vw] leading-[5vw] lg:text-[14px] text-[13px]">
           <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K72 is an agency that builds brands from every angle. Today,
             tomorrow and years from now. We think the best sparks fly when

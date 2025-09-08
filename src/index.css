@@ -10,7 +10,6 @@
 }
 
 body{
-  background-color: #111;
   overflow-x: hidden;
 }
 
@@ -25,6 +24,7 @@ body{
   opacity: 0;
    transition: all ease 0.3s;
 }
+
 .link:hover .moveLink{
   opacity: 1;
 }

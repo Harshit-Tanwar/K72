@@ -2,12 +2,12 @@ import FullScreenNav from "./components/navigation/FullScreenNav";
 import Navbar from "./components/navigation/Navbar";
 import Home from "./pages/Home";
 import Agence from "./pages/agence";
-import Projects from "./pages/projects";
+import Projects from "./pages/Projects";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="text-white">
+    <div className="text-white overflow-x-hidden">
        <Navbar/>
        <FullScreenNav/>
       <Routes>
