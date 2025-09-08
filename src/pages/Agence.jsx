@@ -9,20 +9,20 @@ const Agence = () => {
   const imageRef = useRef(null);
 
   const imageArray = [
-    "/src/components/agence/1.jpg",
-    "/src/components/agence/2.jpg",
-    "/src/components/agence/3.jpg",
-    "/src/components/agence/4jpg",
-    "/src/components/agence/5.jpg",
-    "/src/components/agence/6.jpg",
-    "/src/components/agence/7.jpg",
-    "/src/components/agence/8.jpg",
-    "/src/components/agence/9.jpg",
-    "/src/components/agence/10.jpg",
-    "/src/components/agence/11.jpg",
-    "/src/components/agence/12.jpg", 
-    "/src/components/agence/13.jpg",
-    "/src/components/agence/14.jpg",
+    "/src/components/images/1.jpg",
+    "/src/components/images/2.jpg",
+    "/src/components/images/3.jpg",
+    "/src/components/images/4jpg",
+    "/src/components/images/5.jpg",
+    "/src/components/images/6.jpg",
+    "/src/components/images/7.jpg",
+    "/src/components/images/8.jpg",
+    "/src/components/images/9.jpg",
+    "/src/components/images/10.jpg",
+    "/src/components/images/11.jpg",
+    "/src/components/images/12.jpg", 
+    "/src/components/images/13.jpg",
+    "/src/components/images/14.jpg",
     
   ];
   useGSAP(() => {
