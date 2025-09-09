@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 const Agency = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -12,7 +12,7 @@ const Agency = () => {
     "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg",
-    "http://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg",
@@ -24,41 +24,49 @@ const Agency = () => {
     "https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg",
   ];
+
+  // Preload images to avoid delay
+  useEffect(() => {
+    imageArray.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   useGSAP(() => {
-    gsap.to(imageDivRef.current, {
-      scrollTrigger: {
-        trigger: imageDivRef.current,
-        start: "top 23%",
-        end: "top -150%",
-        scrub: true,
-        pin: true,
-        onUpdate: (elem) => {
-          let imageIndex;
-          if (elem.progress < 1) {
-            imageIndex = Math.floor(elem.progress * imageArray.length);
-          } else {
-            imageIndex = imageArray.length - 1;
-          }
-          imageRef.current.src = imageArray[imageIndex];
-        },
+    ScrollTrigger.create({
+      trigger: imageDivRef.current,
+      start: "top 23%",
+      end: "top -150%",
+      scrub: true,
+      pin: true,
+      onUpdate: (self) => {
+        const index = Math.min(
+          imageArray.length - 1,
+          Math.floor(self.progress * imageArray.length)
+        );
+        if (imageRef.current.src !== imageArray[index]) {
+          imageRef.current.src = imageArray[index];
+        }
       },
     });
   });
+
   return (
     <div className="text-black">
       <div className="section1 py-1 px-2">
         <div
           ref={imageDivRef}
-          className="absolute lg:h-[19.7vw] lg:w-[14.8vw] h-[25vw] w-[20vw] left-[27vw]  lg:top-[23%] lg:left-[30.5vw] lg:rounded-3xl rounded-2xl overflow-hidden"
+          className="absolute lg:h-[19.7vw] lg:w-[14.8vw] h-[25vw] w-[20vw] left-[27vw] lg:top-[23%] lg:left-[30.5vw] lg:rounded-3xl rounded-2xl overflow-hidden"
         >
           <img
             ref={imageRef}
-            className="h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
-            alt=""
+            className="h-full w-full object-cover transition-all duration-300"
+            src={imageArray[0]}
+            alt="scroll images"
           />
         </div>
-        <div className="relative font-[font2]">
+         <div className="relative font-[font2]">
           <div className=" lg:mt-[56vh] mt-[28vh]">
             <h1 className="lg:text-[19.5vw] text-[18vw] text-center uppercase leading-[17vw]">
               SEVEN7Y <br />
@@ -119,4 +127,4 @@ const Agency = () => {
   );
 };
 
-export default Agency
+export default Agency;
