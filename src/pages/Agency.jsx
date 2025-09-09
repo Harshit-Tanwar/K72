@@ -2,27 +2,27 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
+
 const Agency = () => {
   gsap.registerPlugin(ScrollTrigger);
   const imageDivRef = useRef(null);
   const imageRef = useRef(null);
 
   const imageArray = [
-    "/src/components/images/1.jpg",
-    "/src/components/images/2.jpg",
-    "/src/components/images/3.jpg",
-    "/src/components/images/4jpg",
-    "/src/components/images/5.jpg",
-    "/src/components/images/6.jpg",
-    "/src/components/images/7.jpg",
-    "/src/components/images/8.jpg",
-    "/src/components/images/9.jpg",
-    "/src/components/images/10.jpg",
-    "/src/components/images/11.jpg",
-    "/src/components/images/12.jpg", 
-    "/src/components/images/13.jpg",
-    "/src/components/images/14.jpg",
-    
+    "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg",
+    "http://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MEL_480X640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg",
   ];
   useGSAP(() => {
     gsap.to(imageDivRef.current, {
