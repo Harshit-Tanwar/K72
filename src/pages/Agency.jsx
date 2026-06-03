@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Agency = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -54,6 +55,11 @@ const Agency = () => {
 
   return (
     <div className="text-black">
+     <Helmet>
+       <title>Agency</title>
+         <meta name="description" content="Learn about who we are and what drives us." />
+          <link rel="canonical" href="https://k72-lom6.onrender.com/agency" />
+     </Helmet>
       <div className="section1 py-1 px-2">
         <div
           ref={imageDivRef}

@@ -2,6 +2,7 @@ import ProjectCard from "../components/projects/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Helmet } from "react-helmet-async";
 
 const Projects = () => {
   const card = [
@@ -55,6 +56,11 @@ const Projects = () => {
 
   return (
     <div>
+      <Helmet>
+         <title>Projects — K72</title>
+         <meta name="description" content="Explore our work across branding, web, and motion." />
+         <link rel="canonical" href="https://k72-lom6.onrender.com/projects" />
+      </Helmet>
       <div className="lg:p-3">
         <div className="lg:pt-[40vh] pt-[45vh]">
           <h2 className="lg:text-[13vw] text-[20vw] text-black font-[font1]">
