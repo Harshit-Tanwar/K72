@@ -56,9 +56,9 @@ const Agency = () => {
   return (
     <div className="text-black">
      <Helmet>
-       <title>Agency</title>
+       <title>Agency - K72</title>
          <meta name="description" content="Learn about who we are and what drives us." />
-          <link rel="canonical" href="https://k72-lom6.onrender.com/agency" />
+          <link rel="canonical" href="https://k72-lom6.onrender.com/agence" />
      </Helmet>
       <div className="section1 py-1 px-2">
         <div
@@ -70,6 +70,7 @@ const Agency = () => {
             className="h-full w-full object-cover transition-all duration-300"
             src={imageArray[0]}
             alt="scroll images"
+            loading="lazy"
           />
         </div>
          <div className="relative font-[font2]">
@@ -79,7 +80,7 @@ const Agency = () => {
               TWO
             </h1>
             <div className=" lg:pl-[40%] lg:mt-0 mt-[100px]">
-              <p className="lg:text-[3.8vw] text-[5.5vw] px-1  lg:leading-[4vw] leading-5.5 font-[font2]">
+              <p className="lg:text-[3.8vw] text-[5.5vw] px-1 md:leading-10 lg:leading-[4vw] leading-5.5 font-[font2]">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 We’re inquisitive and open-minded, and we make sure creativity
                 crowds out ego from every corner. A brand is a living thing,
@@ -94,7 +95,7 @@ const Agency = () => {
         <div className="lg:mt-50 my-25 font-[font2]">
           <div className="flex lg:px-[10.7vw] text-[18px] lg:mb-40">
             <div className="lg:w-[37%] w-1/2">
-              <h3>Expertise</h3>
+              <h2>Expertise</h2>
             </div>
             <div className="lg:leading-[1.8vw] leading-6 lg:w-[63%] w-1/2">
               <ul>

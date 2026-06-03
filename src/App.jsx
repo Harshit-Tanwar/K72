@@ -10,8 +10,8 @@ const App = () => {
   return (
     <div className="text-white overflow-x-hidden">
       <Helmet>
-        <html />
-        <meta name="robots" property="index, follow" />
+        <html lang="en" />
+        <meta name="robots" content="index, follow" />
         <meta property="og:site_name" content="K72" />
       </Helmet>
 

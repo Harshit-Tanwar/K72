@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
-    <div className="">
+    <>
       <Helmet>
         <title>K72 - Creative Agency</title>
         <meta name="description" content="We build bold digital experiences." />
@@ -34,7 +34,7 @@ const Home = () => {
         </div>
         <HomeBottomText />
       </div>
-    </div>
+    </>
   );
 };
 

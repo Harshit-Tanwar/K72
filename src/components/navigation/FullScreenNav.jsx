@@ -64,7 +64,7 @@ const FullScreenNav = () => {
     [navOpen]
   );
   return (
-    <div className="fullscreennav  w-full h-screen absolute z-99">
+    <nav className="fullscreennav  w-full h-screen absolute z-99">
       <div className="h-screen w-full fixed">
         <div className="h-full w-full flex">
          
@@ -268,7 +268,7 @@ const FullScreenNav = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

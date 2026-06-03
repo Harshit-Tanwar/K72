@@ -7,11 +7,12 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useContext(NavbarContext);
   const [navColor, setnavColor] = useContext(NavbarColorContext);
   return (
-    <div className="w-full flex fixed top-0 z-4 items-start justify-between">
+    <nav className="w-full flex fixed top-0 z-4 items-start justify-between">
       <div className="p-3 w-34">
         <svg className="w-full h-full"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 103 44"
+          aria-label=""
         >
           <path 
             fill={navColor}
@@ -40,7 +41,7 @@ const Navbar = () => {
           <div className="w-6 h-0.5 bg-zinc-400"></div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

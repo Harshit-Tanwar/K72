@@ -55,17 +55,20 @@ const Projects = () => {
   });
 
   return (
-    <div>
+    <>
       <Helmet>
-         <title>Projects — K72</title>
-         <meta name="description" content="Explore our work across branding, web, and motion." />
-         <link rel="canonical" href="https://k72-lom6.onrender.com/projects" />
+        <title>Projects — K72</title>
+        <meta
+          name="description"
+          content="Explore our work across branding, web, and motion."
+        />
+        <link rel="canonical" href="https://k72-lom6.onrender.com/projects" />
       </Helmet>
       <div className="lg:p-3">
         <div className="lg:pt-[40vh] pt-[45vh]">
-          <h2 className="lg:text-[13vw] text-[20vw] text-black font-[font1]">
+          <h1 className="lg:text-[13vw] text-[20vw] text-black font-[font1]">
             WORK
-          </h2>
+          </h1>
         </div>
         <div className="lg:-mt-20 -mt-8 all-cards">
           {card.map(function (elem, idx) {
@@ -96,20 +99,28 @@ const Projects = () => {
               <h1 className="lg:px-6 lg:mt-3 px-3 mt-1">BE</h1>
             </div>
           </div>
-            <div className="border-2 hover:text-[#D3FD50] rounded-full leading-[45px] mb-8 cursor-pointer lg:text-[5vw] text-[15vw]">
-              <h1 className="lg:px-6 lg:mt-3 px-10 mt-2">Contact</h1>
-            </div>
+          <div className="border-2 hover:text-[#D3FD50] rounded-full leading-[45px] mb-8 cursor-pointer lg:text-[5vw] text-[15vw]">
+            <h1 className="lg:px-6 lg:mt-3 px-10 mt-2">Contact</h1>
+          </div>
         </div>
-        <div className="mt-25">
-           <div className="flex lg:flex-row flex-col lg:items-center justify-center lg:gap-8 lg:text-sm text-[10px]">
-            <a href="" className="hover:text-[#D3FD50]">Privacy Policy</a>
-            <a href="" className="hover:text-[#D3FD50]">Privacy Notice</a>
-            <a href="" className="hover:text-[#D3FD50]">Ethics Report</a>
-            <a href="" className="hover:text-[#D3FD50]">Consent Choices</a>
-           </div>
-        </div>
+        <footer className="mt-25">
+          <div className="flex lg:flex-row flex-col lg:items-center justify-center lg:gap-8 lg:text-sm text-[10px]">
+            <a href="" className="hover:text-[#D3FD50]">
+              Privacy Policy
+            </a>
+            <a href="" className="hover:text-[#D3FD50]">
+              Privacy Notice
+            </a>
+            <a href="" className="hover:text-[#D3FD50]">
+              Ethics Report
+            </a>
+            <a href="" className="hover:text-[#D3FD50]">
+              Consent Choices
+            </a>
+          </div>
+        </footer>
       </div>
-    </div>
+    </>
   );
 };
 
