@@ -10,10 +10,8 @@ const Home = () => {
         <title>K72 - Creative Agency</title>
         <meta name="description" content="We build bold digital experiences." />
         <meta property="og:title" content="K72 — Creative Agency" />
-        <meta
-          property="og:description"
-          content="We build bold digital experiences."
-        />
+        <meta property="og:image" content="https://k72-lom6.onrender.com/opengraph_k72_large.jpg" />
+        <meta property="og:description" content="We build bold digital experiences."/>
         <link rel="canonical" href="https://k72-lom6.onrender.com/" />
       </Helmet>
       <div className="h-screen w-screen fixed">
